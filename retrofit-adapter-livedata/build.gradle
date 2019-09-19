@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "0.0.1"
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-core:2.2.0-alpha05'
+    testImplementation 'androidx.lifecycle:lifecycle-runtime:2.2.0-alpha05'
+    testImplementation 'androidx.lifecycle:lifecycle-livedata:2.2.0-alpha05'
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+    testImplementation 'com.squareup.retrofit2:retrofit-mock:2.6.1'
+}
+
+apply from: 'publish.gradle'

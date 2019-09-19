@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/androidx-easier.iml" filepath="$PROJECT_DIR$/androidx-easier.iml" />
       <module fileurl="file://$PROJECT_DIR$/databinding-easier/databinding-easier.iml" filepath="$PROJECT_DIR$/databinding-easier/databinding-easier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retrofit-adapter-livedata/retrofit-adapter-livedata.iml" filepath="$PROJECT_DIR$/retrofit-adapter-livedata/retrofit-adapter-livedata.iml" />
     </modules>
   </component>
 </project>

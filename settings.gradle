@@ -1,2 +1,3 @@
 include ':databinding-easier'
+include ':retrofit-adapter-livedata'
 rootProject.name='androidx-easier'
