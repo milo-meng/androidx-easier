@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/androidx-easier.iml" filepath="$PROJECT_DIR$/androidx-easier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/databinding-easier/androidx-easier-databinding-easier.iml" filepath="$PROJECT_DIR$/databinding-easier/androidx-easier-databinding-easier.iml" />
       <module fileurl="file://$PROJECT_DIR$/databinding-easier/databinding-easier.iml" filepath="$PROJECT_DIR$/databinding-easier/databinding-easier.iml" />
     </modules>
   </component>

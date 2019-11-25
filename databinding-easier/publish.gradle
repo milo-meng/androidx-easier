@@ -2,7 +2,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
 group 'com.milo'
-version '0.0.1'
+version '0.0.2'
 
 task androidSourcesJar(type: Jar) {
     archiveClassifier.set('sources')

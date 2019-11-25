@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 
 abstract class BaseDataBindingFragment<T : ViewDataBinding> : Fragment() {
 
+    private var hasInit = false
+
     protected lateinit var binding: T
 
     abstract fun fragmentLayoutId(): Int
@@ -21,13 +23,18 @@ abstract class BaseDataBindingFragment<T : ViewDataBinding> : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, fragmentLayoutId(), container, false)
-        binding.lifecycleOwner = this
+        if (!hasInit) {
+            binding = DataBindingUtil.inflate(inflater, fragmentLayoutId(), container, false)
+            binding.lifecycleOwner = this
+        }
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        initData(savedInstanceState)
+        if (!hasInit) {
+            initData(savedInstanceState)
+        }
+        hasInit = true
     }
 }
